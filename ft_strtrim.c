@@ -1,11 +1,12 @@
-/*#include "libft.h"
 
-char *ft_strtrim(char const *s1, char const *set)
+/*char *ft_strtrim(char const *s1, char const *set)
 {
-	"  berkay "
-}
+	size_t i = 0;
+	char *str = (char *) s1;
+	char *sett = (char *) set;
 
-int main()
-{
+	while (check(str, sett))
+		i++;
 
 }*/
+

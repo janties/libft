@@ -6,7 +6,7 @@
 /*   By: kisik <kisik@student.42kocaeli.com.tr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/06 23:10:02 by kisik             #+#    #+#             */
-/*   Updated: 2023/07/06 23:37:36 by kisik            ###   ########.fr       */
+/*   Updated: 2023/07/08 09:45:19 by kisik            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,3 +25,4 @@ void *ft_memcpy(void *dest, const void *src, size_t n)
 	}
 	return dest;
 }
+
