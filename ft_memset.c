@@ -1,21 +1,28 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: kisik <kisik@student.42kocaeli.com.tr>     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/07/06 22:00:19 by kisik             #+#    #+#             */
+/*   Updated: 2023/07/06 22:14:28 by kisik            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
-#include <stdio.h>
 
-void *ft_memset(void *b, int c, size_t len)
+void	*ft_memset(void *s, int c, size_t n)
 {
-    char * str = (char *) b;
-    int i = 0;
-    while (str[i] && i <= len)
-    {
-        str[i] = c;
-        i++;
-    }
-    return str;
-}
-
-int main()
-{
-    char url[] = "https://github.com/kisik";
-    ft_memset(&url[6], '*', 10);
-    printf("%s", url);
+	char	*str;
+	size_t	i;
+	
+	str = (void *) s;
+	i = 0;
+	while (str[i] && i < n)
+	{
+		str[i] = c;
+		i++;
+	}
+	return (s);
 }

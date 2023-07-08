@@ -1,16 +1,18 @@
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: kisik <kisik@student.42kocaeli.com.tr>     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/07/06 21:24:47 by kisik             #+#    #+#             */
+/*   Updated: 2023/07/06 21:24:47 by kisik            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-int ft_isalpha(char n)
+#include "libft.h"
+
+int	ft_isalpha(int c)
 {
-	if(n >= 'a' && n <= 'z')
-		return 1;
-	else if(n >= 'A' && n <= 'Z')
-		return 1;
-	return 0;
+	return ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'));
 }
-/*
-int main() {
-	printf("%d", ft_isalpha('5'));
-}
-
-*/

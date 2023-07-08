@@ -1,19 +1,20 @@
+
+
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: kisik <kisik@student.42kocaeli.com.tr>     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/07/06 22:15:47 by kisik             #+#    #+#             */
+/*   Updated: 2023/07/06 22:20:12 by kisik            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-void ft_bzero(void *s, int n)
+void	ft_bzero(void *s, size_t n)
 {
-	ft_memset(s,'0',n);
+	ft_memset(s, 0, n);
 }
-
-/*
-int main()
-{
-    char str[] = "HelloHelloHello";
-    printf("Before ft_bzero: %s\n", str);
-    ft_bzero(str, 4);
-    printf("After ft_bzero:  %s\n", str);
-
-    return 0;
-}
-*/
-//NOT finished

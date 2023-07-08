@@ -1,14 +1,26 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: kisik <kisik@student.42kocaeli.com.tr>     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/07/06 21:51:23 by kisik             #+#    #+#             */
+/*   Updated: 2023/07/07 00:16:08 by kisik            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-size_t ft_strlen(const char *str) {
-	size_t i = 0;
+size_t	ft_strlen(const char *str)
+{
+	size_t	i;
+
+	i = 0;
 	while (str[i])
 		i++;
-	return i;
+	return (i);
 }
-/*int main() {
-	char nick[] = "kisik";
-	printf("%d", ft_strlen(nick));
-}*/
 
 
+lib

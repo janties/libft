@@ -1,20 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: kisik <kisik@student.42kocaeli.com.tr>     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/07/06 23:43:26 by kisik             #+#    #+#             */
+/*   Updated: 2023/07/06 23:44:05 by kisik            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-
-void ft_tolower(char *str)
+int ft_tolower(int c)
 {
-	int i = 0;
-	while (str[i])
-	{
-		if (str[i] >= 'A' && str[i] <= 'Z')
-			str[i] += 32;
-		i++;
-	}
+	if (c >= 'A' && c <= 'Z')
+		c += 32;
+	return c;
 }
-/*
-int main() {
-	char nick[] = "KISIK";
-	ft_tolower(nick);
-	printf("%s", nick);
-}
-*/

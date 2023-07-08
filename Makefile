@@ -15,12 +15,12 @@ OBJ	=	$(SRC:.c=.o)
 
 all:	$(NAME)
 
-
 $(NAME):	$(OBJ)
 			ar rcs $(NAME) $(OBJ)
 
 clean:
 			$(RM) $(OBJ) 
+
 fclean:	clean
 			$(RM) $(NAME)
 
