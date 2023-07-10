@@ -99,3 +99,35 @@ Bir stringi belirtilen bir dosyaya yazar ve yeni satıra geçer.
 
 ## ft_putnbr_fd
 Bir integer değeri belirtilen bir dosyaya yazar.
+
+## function as a parameter
+#include <stdio.h>
+```c
+void ft_print_of_power(int (*f)(int, int), int nbr, int pwr) // return-type (*func name) (args...)
+{
+	int res = f(nbr, pwr);
+	printf("Cevap -> %d\n", res);
+}
+
+int ft_power(int num, int pwr)
+{
+	if(!pwr)
+		return 1;
+	return num * ft_power(num, pwr-1);
+}
+
+int	main(void)
+
+{
+	int nbr = 2;
+	int	power = 3;
+	ft_print_of_power(ft_power, 2, 0);
+	ft_print_of_power(ft_power, 2, 1);
+	ft_print_of_power(ft_power, 2, 2);
+	ft_print_of_power(ft_power, 2, 3);
+	ft_print_of_power(ft_power, 2, 4);
+	ft_print_of_power(ft_power, 2, 5);
+	ft_print_of_power(ft_power, 2, 6);
+	return (0);
+}
+```

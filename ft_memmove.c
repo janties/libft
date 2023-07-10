@@ -2,7 +2,7 @@
 
 void *ft_memmove(void *dest, const void *src, size_t n)
 {
-	if(src > dest)
+	if(src > dest)//overlap
 		return(ft_memcpy(dest, src, n));
 	char * d = (char *)dest;
 	char * s = (char *)src;
