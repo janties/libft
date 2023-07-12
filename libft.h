@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kisik <kisik@student.42kocaeli.com.tr>     +#+  +:+       +#+        */
+/*   By: kesik <kesik@student.42kocaeli.com.tr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/06 21:30:44 by kisik             #+#    #+#             */
-/*   Updated: 2023/07/06 21:30:44 by kisik            ###   ########.fr       */
+/*   Created: 2023/07/06 21:30:44 by sikik             #+#    #+#             */
+/*   Updated: 2023/07/06 21:30:44 by sikik            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 # define LIBFT_H
 # include <stdlib.h>
 # include <unistd.h>
-# include <stdio.h>
 
 int		ft_isalpha(int str);
 int		ft_isalnum(int str);

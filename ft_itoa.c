@@ -1,51 +1,80 @@
-/*#include "libft.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: kisik <kisik@student.42kocaeli.com.tr>     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/07/12 16:44:30 by kisik             #+#    #+#             */
+/*   Updated: 2023/07/12 17:02:56 by kisik            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-char *ft_alloc(int space)
+#include "libft.h"
+
+int	ft_power(int nbr, int n)
 {
-	char * ptr = (char *)malloc(sizeof(char) * (space + 1));
-	if(!ptr)
-		return NULL;
-	return ptr;
+	if (n == 0)
+		return (1);
+	return (nbr * ft_power(nbr, n - 1));
 }
 
-int ft_intlen(int nbr)
+int	nbr_sign(int nbr)
 {
-	
-}	
-char *ft_itoa(int n)
+	if (nbr < 0)
+		return (-1);
+	return (1);
+}
+
+int	nbr_len(int nbr, int sign)
 {
-	int digit_amount = 0;
-	int digit;
-	int sign = 1;
-	if(n == 0)
-		return "0";
-	if(n < 0)
+	int	i;
+
+	i = 0;
+	if (sign == -1)
+		i++;
+	while (nbr)
 	{
-		sign = -1;
-		n *= -1;
-		digit_amount = 1;
-	}
-	size_t tmp = n;
-	while (tmp != 0)
-	{
-		tmp/=10;
-		digit_amount += 1;
-	}
-	tmp = n;
-	char * str = ft_alloc(digit_amount);
-	int i = 0;
-	str[digit_amount] = '\0';
-	while (str[i])
-	{
-		digit = tmp % 10;
-		str[digit_amount - i - 1] = digit + '0';
-		tmp /= 10;
+		nbr /= 10;
 		i++;
 	}
-	if(sign < 0)
-		str[0] = '-';
-	return str;
+	return (i);
 }
 
+void	ft_writing(char *str, int sign, int len, size_t nbr)
+{
+	int		i;
 
-*/
+	str[len] = '\0';
+	i = 0;
+	if (sign == -1)
+	{
+		str[i] = '-';
+		i++;
+		nbr *= -1;
+	}
+	while (i < len)
+	{
+		str[i] = (nbr / ft_power(10, len - i - 1)) % 10 + '0';
+		i++;
+	}
+}
+
+char	*ft_itoa(int n)
+{
+	char		*str;
+	int			sign;
+	int			len;
+
+	if (n == 0)
+		return (ft_strdup("0"));
+	sign = nbr_sign(n);
+	len = nbr_len(n, sign);
+	str = (char *)malloc(sizeof(char) * (len + 1));
+	if (!str)
+		return (NULL);
+	ft_writing(str, sign, len, n);
+	return (str);
+}
+// -1 +1 sign
+// 3 2 len

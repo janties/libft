@@ -1,19 +1,37 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: kisik <kisik@student.42kocaeli.com.tr>     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/07/12 01:19:03 by kisik             #+#    #+#             */
+/*   Updated: 2023/07/12 01:19:06 by kisik            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-void *ft_memmove(void *dest, const void *src, size_t n)
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	if(src > dest)//overlap
-		return(ft_memcpy(dest, src, n));
-	char * d = (char *)dest;
-	char * s = (char *)src;
+	char	*d;
+	char	*s;
+
+	d = (char *)dest;
+	s = (char *)src;
+	if (!dest && !src)
+		return (NULL);
+	if (src > dest)
+		return (ft_memcpy(dest, src, n));
 	while (n--)
 		d[n] = s[n];
-	return dest;
+	return (d);
 }
+//overlap src > dest
 /*
 int	main(void)
 {
-	char s1[] = "con\0sec\0\0te\0tur";
+	char s1[] = "con\0sec\0\0te\0tur";q
 	char s2[20];
 	char *s = ft_memmove(s2, s1, 22);
 	printf("%s",s);

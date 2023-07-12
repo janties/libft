@@ -6,7 +6,7 @@
 /*   By: kisik <kisik@student.42kocaeli.com.tr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/06 22:00:19 by kisik             #+#    #+#             */
-/*   Updated: 2023/07/06 22:14:28 by kisik            ###   ########.fr       */
+/*   Updated: 2023/07/12 00:07:57 by kisik            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,10 @@ void	*ft_memset(void *s, int c, size_t n)
 {
 	char	*str;
 	size_t	i;
-	
-	str = (void *) s;
+
+	str = (char *) s;
 	i = 0;
-	while (str[i] && i < n)
+	while (i < n)
 	{
 		str[i] = c;
 		i++;

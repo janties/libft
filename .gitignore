@@ -1,2 +1,7 @@
 deneme.c
+deneme2.c
 a.out
+.vscode
+*.a
+*.out
+*.gch

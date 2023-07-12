@@ -6,23 +6,28 @@
 /*   By: kisik <kisik@student.42kocaeli.com.tr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/06 23:10:02 by kisik             #+#    #+#             */
-/*   Updated: 2023/07/08 09:45:19 by kisik            ###   ########.fr       */
+/*   Updated: 2023/07/12 10:51:48 by kisik            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-
-void *ft_memcpy(void *dest, const void *src, size_t n)
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	char *d = (char *) dest;//memcpyde zaten kopyalanacak araligi kac verirsek verelim tasma olmaz cunku null kopyalar 
-	char *s = (char *) src;// ve her char arrayin icinde  otomatik null vardir ondan dolayi
-	size_t i = 0;
+	char	*d;
+	char	*s;
+	size_t	i;
+
+	d = (char *) dest;
+	s = (char *) src;
+	if (!dest && !src)
+		return (NULL);
+	i = 0;
 	while (i < n)
 	{
 		d[i] = s[i];
 		i++;
 	}
-	return dest;
+	return (dest);
 }
-
+//no overlap or overflow asa it's (char array) includes '\0' in it

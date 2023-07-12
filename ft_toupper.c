@@ -6,15 +6,15 @@
 /*   By: kisik <kisik@student.42kocaeli.com.tr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/06 23:38:28 by kisik             #+#    #+#             */
-/*   Updated: 2023/07/06 23:43:05 by kisik            ###   ########.fr       */
+/*   Updated: 2023/07/11 23:59:24 by kisik            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_toupper(int c)
+int	ft_toupper(int c)
 {
 	if (c >= 'a' && c <= 'z')
 		c -= 32;
-	return c;
+	return (c);
 }
